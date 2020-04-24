@@ -29,15 +29,15 @@ import JailMonkey from 'jail-monkey'
 
 const App: () => React$Node = () => {
 
-  var Rsult="";
+  var Result="";
 
   if(JailMonkey.isJailBroken()){
     console.log("The device is jailbroken");
-    Rsult="The device is jailbroken";
+    Result="The device is jailbroken";
     //RNExitApp.exitApp()
   }else{
     console.log("The device is not jailbroken");
-    Rsult="The device is not jailbroken";
+    Result="The device is not jailbroken";
   }
 
   return (
