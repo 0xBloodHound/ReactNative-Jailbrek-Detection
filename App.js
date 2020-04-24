@@ -25,15 +25,19 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import JailMonkey from 'jail-monkey'
-import RNExitApp from 'react-native-exit-app';
+//import RNExitApp from 'react-native-exit-app';
 
 const App: () => React$Node = () => {
 
+  var Rsult="";
+
   if(JailMonkey.isJailBroken()){
     console.log("The device is jailbroken");
-    RNExitApp.exitApp()
+    Rsult="The device is jailbroken";
+    //RNExitApp.exitApp()
   }else{
     console.log("The device is not jailbroken");
+    Rsult="The device is not jailbroken";
   }
 
   return (
@@ -51,7 +55,7 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-          <Text style={styles.sectionTitle}>Step One</Text>
+          <Text style={styles.sectionTitle}>Step One : {Result}</Text>
               <Text style={styles.sectionDescription}>
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.
