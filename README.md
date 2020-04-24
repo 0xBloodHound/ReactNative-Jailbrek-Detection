@@ -14,7 +14,7 @@ npx react-native start
 # Run Android Application
 npx react-native run-android
 
-# Run iOS Application
+# Run iOS Application, Open the project by xcode
 ./ios/ReactNativeJailbrekDetection.xcworkspace
 ```
 
